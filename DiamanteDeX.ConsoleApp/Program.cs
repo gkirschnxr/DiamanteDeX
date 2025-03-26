@@ -57,53 +57,96 @@ internal class Program
             }
 
             //diamante superior
-            for (int i = 1; i <= numeroValido; i+=2)
-            {
 
-                for (int y = 1; y <= numeroValido; y+=2)
-                {
+            int quantidadeDeLinhas = (numeroValido - 1) / 2;
+            int quantidadeDeEspacos = (numeroValido - 1) / 2;
+            int quantidadeDeX = 1;
+
+            for (int x = 0; x < quantidadeDeLinhas; x++)
+            {
+                for (int espacos = 0; espacos < quantidadeDeEspacos; espacos++)
                     Console.Write(" ");
 
-                    if (y == i)
-                    {
-                        Console.Write(" ");
-                    }
-                }
+                for (int i = 0; i < quantidadeDeX; i++)
+                    Console.Write("x");
 
-                for (int y = 1; y <= i; y++)
-                {
-                    if (i % 2 != 0)
-                        Console.Write("x");
-                }
+                quantidadeDeX += 2;
+                quantidadeDeEspacos--;
 
-                if (i % 2 != 0)
-                    Console.WriteLine();
+                Console.WriteLine();
             }
 
-            //diamante inferior
-            for (int i = 1; i <= numeroValido; i -= 2)
-            {
 
-                for (int y = 1; y >= numeroValido; y--)
-                {
+            //meio
+
+            for (int y = 1; y <= numeroValido; y++)
+                Console.Write("x");
+
+                Console.WriteLine();
+
+            //inferior
+
+            quantidadeDeX -= 2;
+            quantidadeDeEspacos = 1;
+
+            for (int x = 0; x < quantidadeDeLinhas; x++)
+            {
+                for (int espacos = 0; espacos < quantidadeDeEspacos; espacos++)
                     Console.Write(" ");
 
-                    if (y == i)
-                    {
-                        Console.Write(" ");
-                    }
-                }
+                for (int i = 1; i <= quantidadeDeX; i++)
+                    Console.Write("x");
 
-                for (int y = numeroValido; y >= i; y--)
-                {
-                    if (i % 2 != 0)
-                        Console.Write("x");
-                }
+                quantidadeDeX -= 2;
+                quantidadeDeEspacos++;
 
-                if (i % 2 != 0)
-                    Console.WriteLine();
-            }
+                Console.WriteLine();
+             }
+            //    for (int y = 1; y <= numeroValido; y+=2)
+            //    {
+            //        Console.Write(" ");
 
+            //        if (y == i)
+            //        {
+            //            Console.Write(" ");
+            //        }
+            //    }
+
+            //    for (int y = 1; y <= i; y++)
+            //    {
+            //        if (i % 2 != 0)
+            //            Console.Write("x");
+            //    }
+
+            //    if (i % 2 != 0)
+            //        Console.WriteLine();
+            //}
+
+            ////diamante inferior
+            //for (int i = 1; i <= numeroValido; i -= 2)
+            //{
+
+            //    for (int y = 1; y >= numeroValido; y--)
+            //    {
+            //        Console.Write(" ");
+
+            //        if (y == i)
+            //        {
+            //            Console.Write(" ");
+            //        }
+            //    }
+
+            //    for (int y = numeroValido; y >= i; y--)
+            //    {
+            //        if (i % 2 != 0)
+            //            Console.Write("x");
+            //    }
+
+            //    if (i % 2 != 0)
+            //        Console.WriteLine();
+            //}
+            Console.WriteLine();
+            Console.WriteLine();
             Console.WriteLine("Aqui está seu diamante ;D");
 
             //opcaoSair

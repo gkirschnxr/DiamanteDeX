@@ -102,6 +102,7 @@ internal class Program
 
                 Console.WriteLine();
              }
+
             //    for (int y = 1; y <= numeroValido; y+=2)
             //    {
             //        Console.Write(" ");
